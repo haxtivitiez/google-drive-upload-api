@@ -16,6 +16,7 @@ function getClient()
     $client->setScopes(Google_Service_Drive::DRIVE);
     $client->setAuthConfig('credentials.json');
     $client->setAccessType('offline');
+    $client->setIncludeGrantedScopes(true);
     $client->setPrompt('select_account consent');
 
     // Load previously authorized token from a file, if it exists.
